@@ -1,0 +1,602 @@
+@font-face
+{
+	font-family: "KGColdCoffee";
+	src: url('_sources/KGColdCoffee.ttf');
+}
+
+@font-face
+{
+	font-family: "A Love of Thunder";
+	src: url('_sources/A Love of Thunder.ttf');
+}
+
+@font-face
+{
+	font-family: "Cancan";
+	src: url('_sources/CanCandB_free.ttf');
+}
+
+html
+{
+	height: 100%;
+}
+
+body
+{
+	background-image: url("_sources/bg.jpg");
+	background-position: top;
+	color: white;
+
+	font-family: "Candara";
+	height: 100%;
+	margin: 0;
+
+	display: block-flex;
+}
+
+body *
+{
+	margin: 0;
+	padding: 0;
+}
+
+a[href]
+{
+	text-decoration: none;
+	color: yellow;
+}
+
+a[href]:hover
+{
+	color: orange;
+}
+
+a[href]:active
+{
+	color: darkorange;
+}
+
+/*
+** ENTETE
+*/
+
+header
+{
+	height: 200px;
+	text-align: center;
+	margin: 30px 0 0 0;
+}
+
+
+/*header h1 img
+{
+	width: 800px;
+	height: 250px;
+}*/
+
+header h1 a[href]
+{
+	font-weight: bold;
+	font-size: 140px;
+	font-family: "Cancan";
+	
+	text-shadow: 0 0 8px black;
+
+	text-decoration: none;
+	color: #c9c856;
+	cursor: pointer;
+}
+
+/*header h1 a[href]:hover
+{
+	color: white;
+	animation: anim_titre 4s ease-in-out;
+	animation-iteration-count: infinite;
+}*/
+
+header .profil
+{
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+
+header .profil a
+{
+	text-decoration: none;
+	color: #c9c856;
+	font-weight: bold;
+}
+
+header .profil a:hover
+{
+	color: darkorange;
+	cursor: pointer;
+}
+
+header .profil a:active
+{
+	color: red;
+}
+
+.nav, .chat
+{
+	border-radius: 10%
+}
+
+/*
+**	PARTIE NAVIGATION
+*/
+
+.nav
+{
+	display: block-flex;
+	width: 15%;
+	margin-left: -3px;
+
+	float: left;
+
+	min-width: 100px;
+}
+
+.nav .bouton
+{
+	width: 100%;
+	height: 80px;
+
+	background-color: #82b160;
+	opacity: 0.8;
+
+	position: relative;
+	left: -3px;
+
+	margin-bottom: 50px;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+
+	border-top-right-radius: 25%;
+	border-bottom-right-radius: 25%;
+
+	box-shadow: 0 0 3px white;
+
+	display: flex;
+
+	font-family: "KGColdCoffee", "Candara";
+	font-weight: bold;
+
+	color: #f5e870;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px black;
+	font-size: 22px;
+}
+
+.nav .bouton
+{
+	-webkit-transition: 0.6s;
+  	transition: 0.6s;
+
+  	margin-left: 0px;
+}
+
+.nav .bouton a
+{
+	margin: auto;
+	margin-left: 12px;
+}
+
+nav .bouton .logo_don
+{
+	width: 100px;
+}
+
+nav .bouton .logo_don + a
+{
+	margin-left: 0;
+	font-size: 16px;
+}
+
+.nav .bouton:hover
+{
+	-webkit-transition: 0.6s;
+  	transition: 0.6s;
+
+	background-color: darkgrey;
+	cursor: pointer;
+  	margin-left: 5px;
+}
+
+.nav .bouton:active
+{
+	background-color: #ca2;
+
+	-webkit-transition: 0.2s;
+  	transition: 0.2s;
+}
+
+/*
+**	PARTIE CONTENU CENTRAL
+*/
+
+.contenu
+{
+	display: block;
+	text-align: center;
+	height: 80%;
+	width: 62%;
+	margin: 0 1% 0 16%;
+	background-color: rgba(200, 200, 200, 0.2);
+	border-radius: 15px;
+}
+
+.contenu .intro, 
+.contenu .liste_applis, 
+.contenu .liste_applis table
+{
+	width: 100%;
+}
+
+.contenu .liste_applis td.appli
+{
+	margin: 50px;
+	width: 150px;
+	height: 150px;
+}
+
+.contenu .liste_applis td.appli div
+{
+	border-radius: 50%;
+	width: 90%;
+	height: 130px;
+	margin-left: 5%;
+}
+
+@keyframes anim_appli_hover {
+  0% 
+  {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
+  }
+  50%
+  {
+  	background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  100% 
+  {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.contenu .liste_applis td.appli div:hover
+{
+	cursor: pointer;
+}
+
+.contenu .liste_applis td.appli div img
+{
+	width: 100%;
+	height: 100%;
+	max-width: 150px;
+	max-height: 150px;
+	border-radius: 50%;
+}
+
+.contenu .liste_applis td.appli div img:hover
+{
+	animation: anim_appli_hover 2s ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+/*
+**	PARTIE CHAT
+*/
+
+.chat
+{
+	background-color: rgba(32, 32, 32, 0.8);
+	border: 3px ridge #961;
+	display: inline-block;
+	width: 20%;
+	height: 450px;
+
+	position: absolute;
+	top: 230px;
+	right: 5px;
+}
+
+.chat .histo
+{
+	margin: 2% 0 0 2%;
+	height: 400px/*88%;*/;
+	max-height: 400px;
+	width: 95%;
+	border: 1px solid white;
+	border-top-left-radius: 10%;
+	border-top-right-radius: 10%;
+
+	padding-top: 10px;
+	padding-left: 3px;
+
+	/*overflow-y: scroll;*/
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+
+.chat .mess_entrant
+{
+	height: 5%;
+	width: 95%;
+	margin-left: 2%;
+	border-bottom-left-radius: 10%; 
+	border-bottom-right-radius: 10%;
+
+	border: 1px solid grey;
+	overflow: hidden;
+}
+
+.chat_de
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: orange;
+}
+
+.chat_msg
+{
+	font-size: 12px;
+	margin-left: 4px;
+}
+
+.chat_date
+{
+	font-size: 10px;
+	margin-left: 20px;
+	margin-bottom: 6px;
+	color: lightgrey;
+}
+
+.btn_chat_pe
+{
+	width: 50%;
+	margin-left: 22%;
+}
+
+
+/*
+** PARTIE IDENTIFICATION
+*/
+
+div[class^=pan_]
+{
+	/*background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 10%;
+	border: 3px ridge #961;*/
+	min-height: 300px;
+}
+
+.pan_connexion
+{
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 10%;
+	border: 3px ridge #961;
+
+	width: 50%;
+	margin-left: 25%;
+	height: 300px;
+}
+
+.pan_profil
+{
+	height: 400px;
+	background-color: rgba(0, 0, 0, 1);
+}
+
+.profil_stitre
+{
+	font-weight: bold;
+}
+
+.tab_insc
+{
+	width: 100%;
+}
+
+.tab_insc tr
+{
+	margin: 0 0 20px 0;
+}
+
+.tab_insc tr td
+{
+	text-align: left;
+	vertical-align: middle;
+}
+
+.titre_insc
+{
+	padding-left: 5%;
+}
+
+.tab_insc tr td input
+{
+	width: 90%;
+}
+
+.tab_insc tr td.val_insc
+{
+	text-align: center;
+}
+
+.tab_insc tr td.val_insc input
+{
+	margin-top: 20px;
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: rgba(32, 80, 128, 0.5);
+	border: 3px ridge #961;
+	border-radius: 20%;
+	color: lightgrey;
+}
+
+.tab_insc tr td.val_insc input:hover
+{
+	-webkit-transition: 0.6s;
+  	transition: 0.6s;
+
+	background-color: #b63;
+	cursor: pointer;
+}
+
+.tab_insc tr td.val_insc input:active
+{
+	-webkit-transition: 0s;
+  	transition: 0s;
+
+	background-color: #c10;
+}
+
+/*
+** Partie ANNONCES
+*/
+
+.pan_annonces
+{
+	width: 90%;
+	margin-left: 3%;
+	padding: 0 2%;
+	text-align: left;
+}
+
+.annonce
+{
+	border-radius: 5px;
+	border: 3px groove #a81;
+	margin-bottom: 50px;
+	padding: 5px;
+}
+
+.annonce_titre
+{
+	font-family: "A Love of Thunder";
+	font-size: 30px;
+}
+
+.annonce_pied
+{
+	width: 50%;
+	border-top: 1px solid white;
+}
+
+.annonce_annonceur
+{
+	color: yellow;
+}
+
+.annonce_date
+{
+	color: orange;
+}
+
+/*
+** Partie FAQ
+*/
+
+.pan_faq
+{
+	width: 90%;
+	margin-left: 3%;
+	padding: 0 2%;
+	text-align: left;
+}
+
+/*
+** Divers
+*/
+
+footer
+{
+	width: 100%;
+}
+
+.btn_admin
+{
+	display: block;
+	text-align: center;
+}
+
+.pop_up
+{
+	display: none;
+	text-align: center;
+
+	position: fixed;
+	top: 10%;
+
+	height: 100%;
+	width: 100%;
+}
+
+.fermer_pop_up
+{
+	display: inline-block;
+	background-color: darkred;
+
+	width: 25px;
+	height: 25px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 10%;
+	
+	position: relative;
+	left: 40%;
+	top: 20px;
+}
+
+.fermer_pop_up:hover
+{
+	cursor: pointer;
+	background-color: darkorange;
+}
+
+.fermer_pop_up:active
+{
+	background-color: rgb(50, 0, 0);
+}
+
+.erreur
+{
+	font-weight: bold;
+	color: red;
+}
+
+/*
+** Partie PICKARIA
+*/
+
+.pickaria canvas
+{
+	/*width: 100%;
+	height: 80%;*/
+	background-color: white;
+	border: 1px solid black;
+}
+
+/*
+** Partie ENTRAINEMENT
+*/
+
+.train_fen
+{
+	width: 640px;
+	height: 480px;
+	background-color: white;
+	margin: auto;
+}
